@@ -5,6 +5,7 @@ import About from './components/About';
 import Detail from './components/Detail';
 import ErrorPage from './components/ErrorPage';
 import Form from './components/Form';
+import Favorites from './components/Favorites';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Routes, Route, useLocation, useNavigate } from 'react-router-dom';
@@ -69,6 +70,7 @@ function App() {
             <Route path='/about' element={<About/>} />
             <Route path='/detail/:id' element={<Detail/>}/>
             <Route path='*' element={<ErrorPage/>}/>
+            <Route path = '/favorites' element={<Favorites/>}/>
          </Routes>
          
       </div>
