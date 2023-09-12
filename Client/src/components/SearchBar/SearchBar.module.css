@@ -1,0 +1,24 @@
+.divContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100vw;
+  }
+  
+  .divContent button {
+      font-size: 1em;
+      text-align: center;
+      margin-right: 1em;
+      border-radius: 0.3em;
+  }
+  
+  .divContent button:hover{
+      background-color: #4f772d;
+      color: #f6f4e6;
+  }
+
+  .divContent input{
+    margin: 10px;
+    padding: 5px 20px;
+  }

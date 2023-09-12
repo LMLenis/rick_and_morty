@@ -1,0 +1,29 @@
+.container {
+    display: flex;
+    align-items: center;
+    border: 1px solid #00539F;
+    height:80px;
+    width: 100%;
+    margin: 20px 0;
+    padding:0;
+    background-color:#00539F;
+    list-style-type: none;
+    text-align:center;  
+}
+
+.button {
+    height: auto;
+    width:100%;
+    margin: 40px;
+    padding: 10px 20px;
+   
+}
+
+.nav {
+    height: 40px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align:center;
+    list-style-type:none;
+}
