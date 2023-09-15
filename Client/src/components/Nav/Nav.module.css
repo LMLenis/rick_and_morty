@@ -6,9 +6,13 @@
     width: 100%;
     margin: 20px 0;
     padding:0;
-    background-color:#00539F;
+    /*background-color:#00539F;*/
     list-style-type: none;
-    text-align:center;  
+    text-align:center; 
+    background-image: url('../../assets/firmamento.jpg');
+    background-repeat: no-repeat;
+    background-size:cover; 
+   
 }
 
 .button {

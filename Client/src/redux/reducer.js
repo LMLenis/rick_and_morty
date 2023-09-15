@@ -1,6 +1,6 @@
 import { ADD_FAV, REMOVE_FAV, FILTER, ORDER } from './action-types';
 
-const initialState = {
+let initialState = {
     myFavorites: [],
     allCharacters: []
 }

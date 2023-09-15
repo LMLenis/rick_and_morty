@@ -1,14 +1,29 @@
 .card {
-    position: relative;
-    overflow: hidden;
-    aspect-ratio: 9/12;
-    display: flex;
-    flex-direction: column;
-    border-radius: 7px;
-    box-shadow: rgba(255, 255, 255, 0.3) 0 5vw 6vw -8vw,
-      rgba(255, 255, 255, 0) 0 4.5vw 5vw -6vw,
-      rgba(50, 50, 80, 0.5) 0px 4vw 8vw -2vw, rgba(0, 0, 0, 0.8) 0px 4vw 5vw -3vw;
-    transition: box-shadow 1s var(--cover-ease);
+  margin: 5% auto;
+  max-width: 25vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 3px solid #00539F;
+  font-size: small;
+  border-radius: 20px;
+  font-style: italic;
+  line-height:10px;
+
   }
+
+.cardImage {
+  display: block;
+  width: 300px;
+  height: auto;
+  border-radius: 20px;
+}
+
+.imageContainer{
+  position: relative;
+  text-align: center;
+  display: inline-block;
+  margin-bottom: 5px;
+}
 
  

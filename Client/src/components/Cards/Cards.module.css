@@ -1,7 +1,9 @@
 .container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 2em;
+  max-width: 80vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 70px;
+  margin: 0 70px;
+  padding:50px;
 }
   

@@ -2,10 +2,10 @@ import './App.css';
 import Cards from './components/Cards/Cards';
 import Nav from './components/Nav/Nav.jsx';
 import About from './components/About/About';
-import Detail from './components/Detail';
+import Detail from './components/Detail/Detail';
 import ErrorPage from './components/ErrorPage';
 import Form from './components/Form/Form';
-import Favorites from './components/Favorites';
+import Favorites from './components/Favorites/Favorites';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Routes, Route, useLocation, useNavigate } from 'react-router-dom';
@@ -23,27 +23,36 @@ function App() {
    const [access, setAccess] = useState(false);
    
 
-   const login = (userData) => {
-      const { email, password } = userData;
-      const URL = 'http://localhost:3001/rickandmorty/login/';
-      axios(URL + `?email=${email}&password=${password}`)
-      .then(({ data }) => {
-         const { access } = data;
+   const login = async (userData) => {
+      try {
+         
+         const { email, password } = userData;
+         const URL = 'http://localhost:3001/rickandmorty/login/';
+         const {data} = await axios(URL + `?email=${email}&password=${password}`)
+         const { access } = data; //true / falsesetAccess(access);
          setAccess(access);
          access && navigate('/home');
-      });
+         
+      } catch (error){
+         alert(error);
+      }
    }
+     
 
    useEffect(()=> {!access && navigate('/');}, [access]);
 
-   const onSearch = (id) => {
-      axios(`http://localhost:3001/rickandmorty/character/${id}`).then(({ data }) => {
+   const onSearch = async (id) => {
+      try {
+         const {data} = await axios(`http://localhost:3001/rickandmorty/character/${id}`);
+         
          if (data.name) {
             setCharacters((oldChars) => [...oldChars, data]);
          } else {
-            alert('¡No hay personajes con este ID!');
+            throw new Error('¡No hay personajes con este ID!');
          }
-      });
+      } catch (error) {
+         alert(error)
+      }  
    }
    
    const onClose = (id) => {

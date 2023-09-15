@@ -3,13 +3,13 @@ import styledAbout from './About.module.css'
 
 const About = () => {
     return(
-        <div>
+        <div className={styledAbout.card}>
             <h2>LuisMa</h2>
             <h2>Humanoid</h2>
             <h2>Male</h2>
             <h2>Alive</h2>
             <h2>Colombia</h2>
-            <img src= {me} alt='' />
+            <img className={styledAbout.cardImage} src= {me} alt='' />
         </div>
 
     )

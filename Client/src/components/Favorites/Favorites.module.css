@@ -1,0 +1,28 @@
+.container {
+    max-width: 80vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px;
+    margin: 0 70px;
+    padding:50px;
+  }
+/* 
+  .select {
+    display: flex;
+    align-items: center;
+    height:30px;
+    width: 100px;
+    margin: 0 500px;
+    padding:0;
+    
+  }
+
+  .select2 {
+    display: flex;
+    align-items: center;
+    height:30px;
+    width: 100px;
+    margin: 0 700px;
+    padding:0;
+    
+  } */
